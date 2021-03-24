@@ -41,7 +41,7 @@ function DocRoute({ data, setCurrentRoute, currentRoute }) {
 }
 
 function App() {
-    const [currentRoute, setCurrentRoute] = useState("docs");
+    const [currentRoute, setCurrentRoute] = useState("home");
     const [data, setData] = useState(() => getData());
     return (
         <div className="App">
