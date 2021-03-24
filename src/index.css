@@ -1,13 +1,118 @@
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: var(--myBg);
+    position: relative;
+}
+
+.wave-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    /* border-radius: 5%; */
+    transform: rotate3d(0, 0, 1, 180deg);
+    background: transparent;
+    overflow: hidden;
+    z-index: -1;
+    /* scale: 0.5; */
+    /* transform: rotate3d(0,0,1,50deg); */
+}
+
+.wave {
+    width: 9000px;
+    height: 9025px;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-radius: 45%;
+    background: var(--wave3);
+    animation: wave 85s infinite linear;
+    z-index: 0;
+}
+
+.wave:nth-child(1) {
+    width: 7200px;
+    height: 7025px;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-radius: 40%;
+    background: var(--wave1);
+    animation: wave 75s infinite linear;
+}
+.wave:nth-child(2) {
+    width: 8200px;
+    height: 8025px;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-radius: 45%;
+    background: var(--wave2);
+    animation: wave 55s infinite linear;
+}
+.body-dark .wave{
+    background: var(--wave3-dark);
+}
+.body-dark .wave:nth-child(1){
+    background: var(--wave1-dark);
+}
+.body-dark .wave:nth-child(2){
+    background: var(--wave2-dark);
+}
+body[class*="body-dark"]{
+    background: var(--dark-green-bg);
+}
+
+@keyframes wave {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    position: relative;
+    z-index: -1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    position: relative;
+    z-index: -1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    position: relative;
+    z-index: -1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-dark-color);
+    position: relative;
+    z-index: -1;
 }
