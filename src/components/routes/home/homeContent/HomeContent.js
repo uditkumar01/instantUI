@@ -250,7 +250,7 @@ export function HomeContent({ lightNavColor, setLightNavColor, setCurrentRoute }
                     cardText:
                         "Copy this snippet and paste it in you html page's head tag :",
                     codeSnippet: `
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css"/>
+            <link rel="stylesheet" href="https://instantui.netlify.app/assets/main.css"/>
             `,
                 },
                 {
@@ -258,14 +258,14 @@ export function HomeContent({ lightNavColor, setLightNavColor, setCurrentRoute }
                     cardText:
                         "Copy this snippet and paste it in your css file directly :",
                     codeSnippet: `
-            @import("https://fonts.googleapis.com/css")
+            @import("https://instantui.netlify.app/assets/main.css")
             `,
                 },
                 {
                     subTitle: "",
                     cardText: "For using js copy snippet link :",
                     codeSnippet: `
-            <link rel="stylesheet" href="https://fonts.googleapis.com/js"/>
+            <link rel="stylesheet" href="https://instantui.netlify.app/assets/main.js"/>
             `,
                 },
             ],
