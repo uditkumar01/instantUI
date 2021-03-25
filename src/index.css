@@ -98,16 +98,25 @@ body[class*="body-dark"]{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgb(81, 166, 245);
     position: relative;
     z-index: -1;
 }
 
+.body-dark ::-webkit-scrollbar-track {
+    background: var(--wave1-dark);
+}
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--secondary-color);
+    background: rgb(136, 188, 236);
+    border-radius: 50px;
     position: relative;
     z-index: -1;
+}
+
+.body-dark ::-webkit-scrollbar-thumb {
+    background: var(--wave3-dark);
 }
 
 /* Handle on hover */
