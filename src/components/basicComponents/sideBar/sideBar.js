@@ -1,7 +1,7 @@
 import "./sideBar.css";
 import React, { useState } from "react";
 import { capitalize } from "../../utils";
-export function SideBar({ dataKeysList, activeComponent, setActiveComponent, setCurrentRoute }) {
+export function SideBar({ dataKeysList, activeComponent, setActiveComponent, setCurrentRoute, currentRoute }) {
     const [list1, setList1] = useState(false);
     // const [list2, setList2] = useState(false);
     const [sideBarDisplay, setSideBarDisplay] = useState(false);
@@ -36,10 +36,10 @@ export function SideBar({ dataKeysList, activeComponent, setActiveComponent, set
                     instant UI
                 </div>
                 <ul className="list">
-                    <li className="list-item active">
-                        <button>Home</button>
+                    <li className={currentRoute==="home"?"list-item active":"list-item"}>
+                        <button onClick={()=>setCurrentRoute(()=>"home")}>Home</button>
                     </li>
-                    <li className="list-item drop">
+                    <li className={"list-item drop"}>
                         <button
                             onClick={() => {
                                 dataKeysList?setList1(!list1):setCurrentRoute("docs")
@@ -83,7 +83,7 @@ export function SideBar({ dataKeysList, activeComponent, setActiveComponent, set
                             }):""}
                         </ul>
                     </li>
-                    <li className="list-item">
+                    <li className={currentRoute==="examples"?"list-item active":"list-item"}>
                         <button>Examples</button>
                     </li>
                 </ul>

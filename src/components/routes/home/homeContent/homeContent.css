@@ -208,9 +208,10 @@ h3 {
 /* ui-card */
 .ui-card-container,.home-card-container {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
+
 
 .ui-card {
     /* background: yellowgreen; */
@@ -222,6 +223,7 @@ h3 {
     overflow: hidden;
     padding: 1rem 0.6rem;
 }
+
 .body-dark .ui-card {
     background: var(--green-dark-500);
     color: var(--green-dark-50);
@@ -269,6 +271,7 @@ h3 {
     justify-content: center;
     border-radius: 4px;
     margin-bottom: 1rem;
+    overflow: auto;
 }
 .body-dark .ui-card > .text-section > .ui-card-body > .text > .code-output{
     background: var(--wave3-dark);
@@ -283,12 +286,16 @@ h3 {
     padding: 0.8rem 0.8rem;
     flex-grow: 1;
 }
+
 .ui-card > .text-section > .ui-card-body > .text > .code-snippet {
     background: var(--dark-color);
     color: var(--text-color);
     overflow-wrap: break-word;
     position: relative;
     border-radius: 3px;
+    max-width: 100px;
+    min-width: 100%;
+    overflow: auto;
 }
 .ui-card > .text-section > .ui-card-body > .text > .code-snippet > .code {
     padding: 0.4rem 1rem;
@@ -298,7 +305,7 @@ h3 {
     width: 100%;
 }
 .body-dark .ui-card > .text-section > .ui-card-body > .text > .code-snippet {
-    background: var(--green-dark-200);
+    background: var(--code-dark);
 }
 .body-dark .ui-card > .text-section > .ui-card-body > .text > .code-snippet > .copy {
     background: var(--green-dark-200);
@@ -393,6 +400,7 @@ h3 {
 }
 .body-dark .body-container > .body-content {
     background: var(--dark-green-bg);
+    max-width: 100vw;
 }
 
 /* copy icon */
@@ -458,7 +466,7 @@ h3 {
 }
 
 @media only screen and (max-width: 580px) {
-    .ui-card-container {
+    .ui-card-container,.home-card-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
     .body-container > .body-header > .logo {
@@ -490,10 +498,11 @@ h3 {
         flex-direction: column;
     }
     .gs-btn {
-        width: 100%;
+        width: 100% !important;
         margin: 0.35rem 0;
         text-align: center;
-        border-radius: 50px;
+        padding: 0.75rem 1rem !important;
+        border-radius: 50px !important;
     }
     .body-dark .btn-contain {
         /* background: red; */

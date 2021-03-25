@@ -8,7 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import { getData } from "./components/data/getData";
 
-function HomeRoute({ setCurrentRoute, currentRoute }) {
+function HomeRoute({ setCurrentRoute, currentRoute, data, theme, setTheme }) {
     const [lightNavColor, setLightNavColor] = useState(false);
     return (
         <>
@@ -16,25 +16,31 @@ function HomeRoute({ setCurrentRoute, currentRoute }) {
                 lightNavColor={lightNavColor}
                 setCurrentRoute={setCurrentRoute}
                 currentRoute={currentRoute}
+                theme={theme}
+                setTheme={setTheme}
             />
-            <SideBar setCurrentRoute={setCurrentRoute} />
+            <SideBar
+                setCurrentRoute={setCurrentRoute}
+                currentRoute={currentRoute}
+            />
             <HomeContent
                 lightNavColor={lightNavColor}
                 setLightNavColor={setLightNavColor}
                 setCurrentRoute={setCurrentRoute}
-                currentRoute={currentRoute}
             />
         </>
     );
 }
 
-function DocRoute({ data, setCurrentRoute, currentRoute }) {
+function DocRoute({ data, setCurrentRoute, currentRoute, theme, setTheme }) {
     return (
         <>
             <DocHomeContent
                 data={data}
                 setCurrentRoute={setCurrentRoute}
                 currentRoute={currentRoute}
+                theme={theme}
+                setTheme={setTheme}
             />
         </>
     );
@@ -43,6 +49,15 @@ function DocRoute({ data, setCurrentRoute, currentRoute }) {
 function App() {
     const [currentRoute, setCurrentRoute] = useState("home");
     const [data, setData] = useState(() => getData());
+    // true means light theme is active
+    const [theme, setTheme] = useState(true);
+    useEffect(() => {
+        if (theme) {
+            document.body.className = "";
+        } else {
+            document.body.className = "body-dark";
+        }
+    }, [theme]);
     return (
         <div className="App">
             {
@@ -51,6 +66,9 @@ function App() {
                         <HomeRoute
                             setCurrentRoute={setCurrentRoute}
                             currentRoute={currentRoute}
+                            data={data}
+                            theme={theme}
+                            setTheme={setTheme}
                         />
                     ),
                     docs: (
@@ -58,6 +76,8 @@ function App() {
                             data={data}
                             setCurrentRoute={setCurrentRoute}
                             currentRoute={currentRoute}
+                            theme={theme}
+                            setTheme={setTheme}
                         />
                     ),
                 }[currentRoute]

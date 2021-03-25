@@ -1,17 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 
-export function NavBar({ lightNavColor, setCurrentRoute , currentRoute}) {
-    // true means light theme is active
-    const [theme, setTheme] = useState(true);
-    useEffect(()=>{
-        if (theme) {
-            document.body.className = "";
-        } else {
-            document.body.className = "body-dark";
-        }
-    },[theme]);
-    console.log("checking",currentRoute==="docs",currentRoute);
+export function NavBar({ lightNavColor, setCurrentRoute , currentRoute, theme, setTheme}) {
+    
+    // console.log("checking",currentRoute==="docs",currentRoute);
     return (
         <nav className={lightNavColor ? "ui-navbar ui-light-style" : "ui-navbar"}>
             <div className="ui-nav-brand">

@@ -4,7 +4,13 @@ import React, { useState, useEffect } from "react";
 import "../../../../components.css";
 import { capitalize } from "../../../utils";
 import { NavBar } from "../../../basicComponents/navbar/navbar";
-function DocSideBar({ dataKeysList, activeComponent, setActiveComponent }) {
+function DocSideBar({
+    dataKeysList,
+    activeComponent,
+    setActiveComponent,
+    setCurrentRoute,
+    currentRoute,
+}) {
     const [list1, setList1] = useState(false);
     // const [list2, setList2] = useState(false);
     return (
@@ -14,10 +20,18 @@ function DocSideBar({ dataKeysList, activeComponent, setActiveComponent }) {
                 <br />
                 <br />
                 <br />
-                <li className="list-item">
-                    <button onClick={()=>setActiveComponent(()=>"home")}>Home</button>
+                <li
+                    className={
+                        currentRoute === "home"
+                            ? "list-item active"
+                            : "list-item"
+                    }
+                >
+                    <button onClick={() => setCurrentRoute(() => "home")}>
+                        Home
+                    </button>
                 </li>
-                <li className="list-item drop">
+                <li className={"list-item drop"}>
                     <button
                         onClick={() => {
                             setList1(!list1);
@@ -51,13 +65,25 @@ function DocSideBar({ dataKeysList, activeComponent, setActiveComponent }) {
                                             : "list-item"
                                     }
                                 >
-                                    <button onClick={()=>setActiveComponent(componentName)}>{capitalize(componentName)}</button>
+                                    <button
+                                        onClick={() =>
+                                            setActiveComponent(componentName)
+                                        }
+                                    >
+                                        {capitalize(componentName)}
+                                    </button>
                                 </li>
                             );
                         })}
                     </ul>
                 </li>
-                <li className="list-item">
+                <li
+                    className={
+                        currentRoute === "examples"
+                            ? "list-item active"
+                            : "list-item"
+                    }
+                >
                     <button>Examples</button>
                 </li>
             </ul>
@@ -67,21 +93,19 @@ function DocSideBar({ dataKeysList, activeComponent, setActiveComponent }) {
 
 function ScrollSpyItem({ id, subTitle, activeSec, setActiveSec }) {
     return (
-        <li
-            className={
-                activeSec === id ? "list-item active" : "list-item"
-            }
-        >
-            <a href={"#" + id} onClick={()=>setActiveSec(()=>id)}>{subTitle}</a>
+        <li className={activeSec === id ? "list-item active" : "list-item"}>
+            <a href={"#" + id} onClick={() => setActiveSec(() => id)}>
+                {subTitle}
+            </a>
         </li>
     );
 }
 
 function DocScrollSpy({ scrollSpyData }) {
     const [activeSec, setActiveSec] = useState(scrollSpyData[0].id);
-    useEffect(()=>{
+    useEffect(() => {
         setActiveSec(scrollSpyData[0].id);
-    },[scrollSpyData[0].id]);
+    }, [scrollSpyData[0].id]);
     // console.log(scrollSpyData,"focus spy");
     return (
         <div className={"side-bar open sidebar-static"}>
@@ -112,7 +136,13 @@ function DocScrollSpy({ scrollSpyData }) {
         </div>
     );
 }
-export function DocHomeContent({ data, setCurrentRoute, currentRoute }) {
+export function DocHomeContent({
+    data,
+    setCurrentRoute,
+    currentRoute,
+    theme,
+    setTheme,
+}) {
     const [staticSideBar, setStaticSidebar] = useState(true);
     const dataKeysList = Object.keys(data);
     const [activeComponent, setActiveComponent] = useState(dataKeysList[0]);
@@ -120,7 +150,7 @@ export function DocHomeContent({ data, setCurrentRoute, currentRoute }) {
     //     setActiveComponent(dataKeysList[0]);
     // },[dataKeysList[0]]);
 
-    console.log("domehome",currentRoute);
+    // console.log("domehome",currentRoute);
     useEffect(() => {
         function handleResize() {
             setStaticSidebar((staticSideBar) => {
@@ -153,7 +183,13 @@ export function DocHomeContent({ data, setCurrentRoute, currentRoute }) {
     return (
         <>
             <div className="nav-fixed">
-                <NavBar lightNavColor={true} setCurrentRoute={setCurrentRoute} currentRoute={currentRoute}  />
+                <NavBar
+                    lightNavColor={true}
+                    setCurrentRoute={setCurrentRoute}
+                    currentRoute={currentRoute}
+                    theme={theme}
+                    setTheme={setTheme}
+                />
             </div>
             <div className="doc-container">
                 {!staticSideBar ? (
@@ -162,6 +198,7 @@ export function DocHomeContent({ data, setCurrentRoute, currentRoute }) {
                         activeComponent={activeComponent}
                         setActiveComponent={setActiveComponent}
                         setCurrentRoute={setCurrentRoute}
+                        currentRoute={currentRoute}
                     />
                 ) : (
                     <div className="doc-left-side">
@@ -170,6 +207,7 @@ export function DocHomeContent({ data, setCurrentRoute, currentRoute }) {
                             activeComponent={activeComponent}
                             setActiveComponent={setActiveComponent}
                             setCurrentRoute={setCurrentRoute}
+                            currentRoute={currentRoute}
                         />
                     </div>
                 )}
