@@ -269,9 +269,10 @@ h3 {
     padding: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 4px;
     margin-bottom: 1rem;
-    overflow: auto;
+    /* overflow: auto; */
 }
 .body-dark .ui-card > .text-section > .ui-card-body > .text > .code-output{
     background: var(--wave3-dark);

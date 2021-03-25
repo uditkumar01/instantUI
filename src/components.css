@@ -1787,7 +1787,7 @@ textarea:focus {
     top: 0.25rem;
     font-size: 1rem;
     left: 0.25rem;
-    color: var(--placeholder-color);
+    color: var(--secondary-color);
     z-index: 0;
     transition: all 0.3s ease;
 }
@@ -2048,4 +2048,8 @@ textarea:focus {
     ~ .radio-outer-circle
     > .radio-inner-circle {
     border: 5px solid;
+}
+
+.fix-floating-btn{
+    position: static;
 }
