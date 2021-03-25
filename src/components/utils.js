@@ -59,8 +59,8 @@ export function highLightKeywords(codeSnippet) {
         "&lt;<output class='p-tag-color'>p</output>"
     );
     codeSnippet = codeSnippet.replace(
-        /\/p/g,
-        "/<output class='p-tag-color'>p</output>"
+        /\/p&gt;/g,
+        "/<output class='p-tag-color'>p</output>&gt;"
     );
     // rel-tag-highlight
     codeSnippet = codeSnippet.replace(
@@ -96,8 +96,8 @@ export function highLightKeywords(codeSnippet) {
     );
     // i-tag-highlight
     codeSnippet = codeSnippet.replace(
-        /\/i/g,
-        " /<output class='i-tag-color'>i</output>"
+        /\/i&gt;/g,
+        " /<output class='i-tag-color'>i</output>&gt;"
     );
 
     // ul-tag-highlight
@@ -151,8 +151,8 @@ export function highLightKeywords(codeSnippet) {
     );
     // a-tag-highlight
     codeSnippet = codeSnippet.replace(
-        /\/a/g,
-        " /<output class='a-tag-color'>a</output>"
+        /\/a&gt;/g,
+        " /<output class='a-tag-color'>a</output>&gt;"
     );
 
 

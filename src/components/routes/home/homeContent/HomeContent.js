@@ -249,24 +249,18 @@ export function HomeContent({ lightNavColor, setLightNavColor, setCurrentRoute }
                     subTitle: "",
                     cardText:
                         "Copy this snippet and paste it in you html page's head tag :",
-                    codeSnippet: `
-            <link rel="stylesheet" href="https://instantui.netlify.app/assets/main.css"/>
-            `,
+                    codeSnippet: `<link rel="stylesheet" href="https://instantui.netlify.app/assets/main.css"/>`,
                 },
                 {
                     subTitle: "",
                     cardText:
                         "Copy this snippet and paste it in your css file directly :",
-                    codeSnippet: `
-            @import("https://instantui.netlify.app/assets/main.css")
-            `,
+                    codeSnippet: `@import("https://instantui.netlify.app/assets/main.css")`,
                 },
                 {
                     subTitle: "",
                     cardText: "For using js copy snippet link :",
-                    codeSnippet: `
-            <link rel="stylesheet" href="https://instantui.netlify.app/assets/main.js"/>
-            `,
+                    codeSnippet: `<link rel="stylesheet" href="https://instantui.netlify.app/assets/main.js"/>`,
                 },
             ],
             iconClass1: "fas fa-question-circle",
