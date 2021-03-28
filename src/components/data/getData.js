@@ -52,7 +52,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <nav class="navbar nav-iv primary mid-animation">
     <div class="nav-brand">
@@ -101,7 +101,7 @@ export function getData() {
                 subTitle: "NavBar v0.0.2",
                 codeOutput: (
                     <>
-                        <nav className="navbar nav-iv primary mid-animation">
+                        <nav className="navbar nav-iv secondary mid-animation">
                             <div className="nav-brand">
                                 <p>NAVBAR</p>
                                 <button id="ham-icon">&#8801;</button>
@@ -126,9 +126,9 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
-<nav class="navbar nav-iv primary mid-animation">
+<nav class="navbar nav-iv secondary mid-animation">
     <div class="nav-brand">
         <p>NAVBAR</p>
         <button id="ham-icon" onclick="hamClickHandler();">
@@ -160,7 +160,7 @@ export function getData() {
                 subTitle: "NavBar v0.0.3",
                 codeOutput: (
                     <>
-                        <nav className="navbar nav-iv primary mid-animation">
+                        <nav className="navbar nav-iv success mid-animation">
                             <div className="nav-brand">
                                 <p>NAVBAR</p>
                                 <button id="ham-icon">&#8801;</button>
@@ -216,9 +216,9 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
-<nav class="navbar nav-iv primary mid-animation">
+<nav class="navbar nav-iv success mid-animation">
     <div class="nav-brand">
         <p>NAVBAR</p>
         <button id="ham-icon" onclick="hamSpClickHandler();">
@@ -350,7 +350,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <nav class="navbar nav-iv nav-sp dark mid-animation">
     <div class="nav-brand">
@@ -420,6 +420,352 @@ export function getData() {
 </nav>
         `,
             },
+            {
+                id: uuid(),
+                subTitle: "NavBar v0.0.5",
+                codeOutput: (
+                    <>
+                        <nav className="navbar nav-iv nav-sp warning mid-animation">
+                            <div className="nav-brand">
+                                <p>NAVBAR</p>
+                                <ul className="social-links" style={{}}>
+                                    <li className="link">
+                                        <i className="fab fa-twitter"></i>
+                                    </li>
+                                    <li className="link">
+                                        <i className="fab fa-facebook-f"></i>
+                                    </li>
+                                    <li className="link">
+                                        <i className="fab fa-instagram"></i>
+                                    </li>
+                                    <li className="link">
+                                        <i className="fab fa-linkedin-in"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="links-container">
+                                <ul className="links" style={{}}>
+                                    <li className="link">
+                                        Home
+                                        <hr />
+                                    </li>
+                                    <li className="link active">
+                                        About
+                                        <hr />
+                                    </li>
+                                    <li className="link">
+                                        Contact
+                                        <hr />
+                                    </li>
+                                </ul>
+                                <ul className="links" style={{}}>
+                                    <li className="link">
+                                        <button id="ham-icon">&#8801;</button>
+                                        <hr />
+                                    </li>
+                                    <li className="link">
+                                        <i className="fas fa-inbox icon"></i>
+                                        <hr />
+                                    </li>
+                                    <li className="link active">
+                                        <i className="fas fa-bell icon">
+                                            <span className="badge badge-xsm danger top right br-3 pl-3 pr-3 pt-1 pb-1">
+                                                9+
+                                            </span>
+                                        </i>
+                                        <hr />
+                                    </li>
+                                    <li className="link avatar-link">
+                                        <div
+                                            className="avatar icon"
+                                            style={{
+                                                backgroundImage:
+                                                    "url(https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)",
+                                                width: "42px",
+                                                height: "42px",
+                                                position: "relative",
+                                            }}
+                                        ></div>
+                                        <hr />
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </>
+                ),
+                cardText:
+                    "Copy this snippet and paste it in your html page's body tag:",
+                codeSnippet: `
+<nav class="navbar nav-iv nav-sp warning mid-animation">
+    <div class="nav-brand">
+        <p>NAVBAR</p>
+        <ul class="social-links" style="">
+            <li class="link">
+                <i class="fab fa-twitter"></i>
+            </li>
+            <li class="link">
+                <i class="fab fa-facebook-f"></i>
+            </li>
+            <li class="link">
+                <i class="fab fa-instagram"></i>
+            </li>
+            <li class="link">
+                <i class="fab fa-linkedin-in"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="links-container">
+        <ul class="links" style="">
+            <li class="link">
+                Home
+                <hr />
+            </li>
+            <li class="link active">
+                About
+                <hr />
+            </li>
+            <li class="link">
+                Contact
+                <hr />
+            </li>
+        </ul>
+        <ul class="links" style="">
+            <li class="link" onclick="hamSp2ClickHandler();">
+                <button id="ham-icon">&#8801;</button>
+                <hr />
+            </li>
+            <li class="link">
+                <i class="fas fa-inbox icon"></i>
+                <hr />
+            </li>
+            <li class="link active">
+                <i class="fas fa-bell icon"
+                    ><span
+                        class="badge badge-xsm danger top right br-3 pl-3 pr-3 pt-1 pb-1"
+                        >9+</span
+                    ></i
+                >
+                <hr />
+            </li>
+            <li class="link avatar-link">
+                <div
+                    class="avatar icon"
+                    style="
+                        background-image: url(https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+                        width: 42px;
+                        height: 42px;
+                        position: relative;
+                    "
+                ></div>
+                <hr />
+            </li>
+        </ul>
+    </div>
+</nav>
+        `,
+            },
+            {
+                id: uuid(),
+                subTitle: "NavBar v0.0.6",
+                codeOutput: (
+                    <>
+                        <nav className="navbar nav-iv nav-sp light mid-animation">
+                            <div className="nav-brand">
+                                <p>NAVBAR</p>
+                                <ul className="social-links" style={{}}>
+                                    <li className="link">
+                                        <i className="fab fa-twitter"></i>
+                                    </li>
+                                    <li className="link">
+                                        <i className="fab fa-facebook-f"></i>
+                                    </li>
+                                    <li className="link">
+                                        <i className="fab fa-instagram"></i>
+                                    </li>
+                                    <li className="link">
+                                        <i className="fab fa-linkedin-in"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="links-container">
+                                <ul className="links" style={{}}>
+                                    <li className="link">
+                                        Home
+                                        <hr />
+                                    </li>
+                                    <li className="link active">
+                                        About
+                                        <hr />
+                                    </li>
+                                    <li className="link">
+                                        Contact
+                                        <hr />
+                                    </li>
+                                </ul>
+                                <ul className="links" style={{}}>
+                                    <li className="link">
+                                        <button id="ham-icon">&#8801;</button>
+                                        <hr />
+                                    </li>
+                                    <li className="link">
+                                        <i className="fas fa-inbox icon"></i>
+                                        <hr />
+                                    </li>
+                                    <li className="link active">
+                                        <i className="fas fa-bell icon">
+                                            <span className="badge badge-xsm danger top right br-3 pl-3 pr-3 pt-1 pb-1">
+                                                9+
+                                            </span>
+                                        </i>
+                                        <hr />
+                                    </li>
+                                    <li className="link avatar-link">
+                                        <div
+                                            className="avatar icon"
+                                            style={{
+                                                backgroundImage:
+                                                    "url(https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)",
+                                                width: "42px",
+                                                height: "42px",
+                                                position: "relative",
+                                            }}
+                                        ></div>
+                                        <hr />
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </>
+                ),
+                cardText:
+                    "Copy this snippet and paste it in your html page's body tag:",
+                codeSnippet: `
+<nav class="navbar nav-iv nav-sp light mid-animation">
+    <div class="nav-brand">
+        <p>NAVBAR</p>
+        <ul class="social-links" style="">
+            <li class="link">
+                <i class="fab fa-twitter"></i>
+            </li>
+            <li class="link">
+                <i class="fab fa-facebook-f"></i>
+            </li>
+            <li class="link">
+                <i class="fab fa-instagram"></i>
+            </li>
+            <li class="link">
+                <i class="fab fa-linkedin-in"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="links-container">
+        <ul class="links" style="">
+            <li class="link">
+                Home
+                <hr />
+            </li>
+            <li class="link active">
+                About
+                <hr />
+            </li>
+            <li class="link">
+                Contact
+                <hr />
+            </li>
+        </ul>
+        <ul class="links" style="">
+            <li class="link" onclick="hamSp2ClickHandler();">
+                <button id="ham-icon">&#8801;</button>
+                <hr />
+            </li>
+            <li class="link">
+                <i class="fas fa-inbox icon"></i>
+                <hr />
+            </li>
+            <li class="link active">
+                <i class="fas fa-bell icon"
+                    ><span
+                        class="badge badge-xsm danger top right br-3 pl-3 pr-3 pt-1 pb-1"
+                        >9+</span
+                    ></i
+                >
+                <hr />
+            </li>
+            <li class="link avatar-link">
+                <div
+                    class="avatar icon"
+                    style="
+                        background-image: url(https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+                        width: 42px;
+                        height: 42px;
+                        position: relative;
+                    "
+                ></div>
+                <hr />
+            </li>
+        </ul>
+    </div>
+</nav>
+        `,
+            },
+            {
+                id: uuid(),
+                subTitle: "NavBar v0.0.7",
+                codeOutput: (
+                    <>
+                        <nav className="navbar nav-iv danger mid-animation">
+                            <div className="nav-brand">
+                                <p>NAVBAR</p>
+                                <button id="ham-icon">&#8801;</button>
+                            </div>
+                            <div className="links-container single-ul">
+                                <ul className="links" style={{}}>
+                                    <li className="link">
+                                        Home
+                                        <hr />
+                                    </li>
+                                    <li className="link active">
+                                        About
+                                        <hr />
+                                    </li>
+                                    <li className="link">
+                                        Contact
+                                        <hr />
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </>
+                ),
+                cardText:
+                    "Copy this snippet and paste it in your html page's body tag:",
+                codeSnippet: `
+<nav class="navbar nav-iv danger mid-animation">
+    <div class="nav-brand">
+        <p>NAVBAR</p>
+        <button id="ham-icon" onclick="hamClickHandler();">
+            &#8801;
+        </button>
+    </div>
+    <div class="links-container single-ul">
+        <ul class="links" style="">
+            <li class="link">
+                Home
+                <hr />
+            </li>
+            <li class="link active">
+                About
+                <hr />
+            </li>
+            <li class="link">
+                Contact
+                <hr />
+            </li>
+        </ul>
+    </div>
+</nav>
+        `,
+            },
         ],
         cards: [
             {
@@ -455,7 +801,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="card card-horizontal">
     <div class="card-pic">
@@ -517,7 +863,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="card card-horizontal rev img-right">
     <div class="card-pic">
@@ -579,7 +925,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="card card-vertical">
     <div class="card-pic">
@@ -641,7 +987,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="card card-vertical img-below">
     <div class="card-pic">
@@ -704,7 +1050,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="card card-horizontal dark-mode">
     <div class="card-pic">
@@ -766,7 +1112,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="card card-horizontal rev img-right dark-mode">
     <div class="card-pic">
@@ -828,7 +1174,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="card card-vertical dark-mode">
     <div class="card-pic">
@@ -890,7 +1236,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="card card-vertical img-below dark-mode">
     <div class="card-pic">
@@ -948,7 +1294,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 
 <div class="alert info">
@@ -999,7 +1345,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="alert success">
     <div class="alert-header">
@@ -1049,7 +1395,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="alert warning">
     <div class="alert-header">
@@ -1099,7 +1445,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="alert danger">
     <div class="alert-header">
@@ -1143,7 +1489,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="alert alert-sm">
     <div class="alert-header">
@@ -1182,7 +1528,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="alert alert-sm success">
     <div class="alert-header">
@@ -1220,7 +1566,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="alert alert-sm warning">
     <div class="alert-header">
@@ -1258,7 +1604,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="alert alert-sm danger">
     <div class="alert-header">
@@ -1299,7 +1645,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="form-field success-bg bg-inherit">
     <label class="radio-label">
@@ -1339,7 +1685,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
                 <div class="form-field primary-bg type-i bg-inherit radio-colored">
                 <label class="radio-label">
@@ -1379,7 +1725,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="form-field danger-bg type-ii bg-inherit">
     <label class="radio-label">
@@ -1419,7 +1765,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="form-field warning-bg type-iii bg-inherit">
     <label class="radio-label">
@@ -1464,7 +1810,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="dropdown m-8">
     <button class="btn btn-md success br-3" href="">
@@ -1512,7 +1858,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="form-field primary-bg bg-transparent">
     <input class="input-field" type="text" required />
@@ -1555,7 +1901,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="form-field warning-bg bg-transparent">
     <input class="input-field" type="text" required />
@@ -1591,7 +1937,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="form-field danger-bg bg-transparent">
     <textarea class="input-field" required></textarea>
@@ -1621,7 +1967,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div class="form-field primary-bg bg-inherit">
     <label class="checkbox-label">
@@ -1670,7 +2016,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <span class="badge badge-sm light br-3">4</span>
 <span class="badge badge-sm dark br-4">40</span>
@@ -1715,7 +2061,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <span class="badge badge-md light br-3">4</span>
 <span class="badge badge-md dark br-4">40</span>
@@ -1760,7 +2106,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <span class="badge badge-lg light br-3">4</span>
 <span class="badge badge-lg dark br-4">40</span>
@@ -1796,7 +2142,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div
     class="avatar"
@@ -1829,7 +2175,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div
     class="avatar"
@@ -1860,7 +2206,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div
     class="avatar"
@@ -1891,7 +2237,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <div
     class="avatar"
@@ -1945,7 +2291,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <i class="fab fa-instagram-square icon icon-lg bg-inherit danger-bg mr-10">
     <span class="badge badge-sm bg-inherit p-0 p-2 br-round top right">
@@ -2004,7 +2350,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <button class="btn btn-sm danger btn-bounce br-50">Button</button>
 
@@ -2030,7 +2376,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <button class="btn btn-md danger btn-bounce br-50">Button</button>
 
@@ -2062,7 +2408,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <button class="btn btn-lg danger btn-bounce br-50">Button</button>
 
@@ -2087,7 +2433,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <button class="btn btn-block success pt-10 pb-10 br-50 fs-2 btn-stretch">Button</button>
             `,
@@ -2107,7 +2453,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <button class="btn-float gradient-animate bottom right icon-btn light br-round b-solid btn-bounce">
     <i class="fas fa-laugh-beam icon p-8 warning-bg br-50 fs-2 m-4"></i>
@@ -2135,7 +2481,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <a class="danger-bg bg-inherit fs-05">click here</a>
 <a class="primary-bg bg-inherit fs-1">click here</a>
@@ -2159,7 +2505,7 @@ export function getData() {
                     </>
                 ),
                 cardText:
-                    "Copy this snippet and paste it in you html page's body tag:",
+                    "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
 <a class="danger-bg bg-inherit fs-08">click here</a>
 <a class="primary-bg bg-inherit fs-12">click here</a>
