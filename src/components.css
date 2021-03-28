@@ -1148,6 +1148,7 @@ textarea:focus {
     cursor: pointer;
     transition: 0.2s ease-in-out;
     margin-left: 2px;
+    overflow: hidden;
 }
 
 /* underline animation */
@@ -1557,7 +1558,8 @@ textarea:focus {
         padding: 0;
     }
     .navbar > .links-container > .links > .link {
-        padding-left: 1.8rem;
+        padding: 1rem 1.8rem;
+        overflow: hidden;
         margin: 0;
     }
     .navbar > .links-container > .links:first-child > .link > hr {
@@ -1580,12 +1582,14 @@ textarea:focus {
     .navbar > .links-container.single-ul > .links {
         flex-direction: column;
         /* display: none; */
+        overflow: hidden;
         width: 100%;
         flex: 1;
     }
     .navbar > .links-container.single-ul > .links > .link {
         justify-content: flex-start;
-        padding-left: 1.8rem;
+        overflow: hidden;
+        padding: 1rem 1.8rem;
     }
     /* .navbar > .links-container > .links > .link > .icon:not(.avatar):hover,
     .navbar > .links-container > .links > .link > .icon:not(.avatar):focus,

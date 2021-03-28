@@ -91,7 +91,7 @@ body[class*="body-dark"]{
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 0px;
     position: relative;
     z-index: -1;
 }
