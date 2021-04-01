@@ -56,7 +56,7 @@ export function NavBar({ lightNavColor, setCurrentRoute , currentRoute, theme, s
             </ul>
             <ul className="ui-list">
                 {/* <li className="ui-list-item search-here"><input type="text" placeholder="search"/></li> */}
-                <li className="ui-list-item ui-btn ui-btn-light">Get Started</li>
+                <li className="ui-list-item ui-btn ui-btn-light" onClick={()=>{setCurrentRoute(()=>"docs")}}>Get Started</li>
                 <i
                     class={
                         theme ? "fas fa-moon theme-btn" : "fas fa-sun theme-btn"
