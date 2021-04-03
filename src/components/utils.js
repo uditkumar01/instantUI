@@ -5,19 +5,34 @@ export function highLightKeywords(codeSnippet) {
     codeSnippet = codeSnippet.replace(/'/g, '"');
     // class-tag-highlight
     codeSnippet = codeSnippet.replace(
-        / class/g,
-        " <output class='class-tag-color'>class</output>"
+        / class="/g,
+        " <output class='class-tag-color'>class</output>=\""
     );
 
     // style-tag-highlight
     codeSnippet = codeSnippet.replace(
-        / style/g,
-        " <output class='style-tag-color'>style</output>"
+        / style="/g,
+        " <output class='style-tag-color'>style</output>=\""
+    );
+    // type-tag-highlight
+    codeSnippet = codeSnippet.replace(
+        / type="/g,
+        " <output class='div-tag-color'>type</output>=\""
+    );
+    // name-tag-highlight
+    codeSnippet = codeSnippet.replace(
+        / name="/g,
+        " <output class='div-tag-color'>name</output>=\""
+    );
+    // checked-tag-highlight
+    codeSnippet = codeSnippet.replace(
+        / checked="/g,
+        " <output class='div-tag-color'>checked</output>=\""
     );
     // onclick-tag-highlight
     codeSnippet = codeSnippet.replace(
-        / onclick/g,
-        " <output class='event-attr-color'>onclick</output>"
+        / onclick="/g,
+        " <output class='event-attr-color'>onclick</output>=\""
     );
     let str_list = codeSnippet.match(/(?:"[^"]*"|^[^"]*$)/g);
     let startIndex = 0;
@@ -89,6 +104,11 @@ export function highLightKeywords(codeSnippet) {
         /\/nav/g,
         " /<output class='nav-tag-color'>nav</output>"
     );
+    // input-tag-highlight
+    codeSnippet = codeSnippet.replace(
+        /&lt;input/g,
+        " &lt;<output class='p-tag-color'>input</output>"
+    );
     // i-tag-highlight
     codeSnippet = codeSnippet.replace(
         /&lt;i/g,
@@ -98,6 +118,27 @@ export function highLightKeywords(codeSnippet) {
     codeSnippet = codeSnippet.replace(
         /\/i&gt;/g,
         " /<output class='i-tag-color'>i</output>&gt;"
+    );
+    // small-tag-highlight
+    codeSnippet = codeSnippet.replace(
+        /&lt;small/g,
+        " &lt;<output class='i-tag-color'>small</output>"
+    );
+    // small-tag-highlight
+    codeSnippet = codeSnippet.replace(
+        /\/small&gt;/g,
+        " /<output class='i-tag-color'>small</output>&gt;"
+    );
+
+    // label-tag-highlight
+    codeSnippet = codeSnippet.replace(
+        /&lt;label/g,
+        " &lt;<output class='ul-tag-color'>label</output>"
+    );
+    // label-tag-highlight
+    codeSnippet = codeSnippet.replace(
+        /\/label&gt;/g,
+        " /<output class='ul-tag-color'>label</output>&gt;"
     );
 
     // ul-tag-highlight

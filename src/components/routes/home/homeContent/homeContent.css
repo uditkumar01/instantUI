@@ -312,14 +312,11 @@ h3 {
 }
 .body-dark .ui-card > .text-section > .ui-card-body > .text > .code-snippet > .copy {
     background: var(--green-dark-200);
+    background: url(../../../icons/copyD.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.body-dark
-    .ui-card
-    > .text-section
-    > .ui-card-body
-    > .text
-    > .code-snippet
-    > .copy:hover,
 .body-dark
     .ui-card
     > .text-section
@@ -328,6 +325,10 @@ h3 {
     > .code-snippet
     > .copy:focus {
     background: var(--green-dark-50);
+    background: url(../../../icons/check2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .ui-card > .text-section > .ui-card-footer {
@@ -410,25 +411,26 @@ h3 {
 
 .code-snippet > .copy {
     position: absolute;
-    right: 0.8rem;
-    top: 0.45rem;
+    right: 1rem;
+    top: 0.48rem;
     background: var(--secondary-dark-color);
-    height: 34px;
-    width: 34px;
-    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    border-radius: 10%;
     cursor: pointer;
     transition: all 0.28s ease-in-out;
+    background: url(../../../icons/copyL.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
-.code-snippet > .copy:focus{
-    background: var(--light-color-100);
-}
-.code-snippet > .copy::before {
-    content: "📋";
-    transition: all 0.28s ease-in-out;
-}
-.code-snippet > .copy:active:before,
-.code-snippet > .copy:focus:before {
-    content: "✔️";
+.code-snippet > .copy:active,
+.code-snippet > .copy:focus {
+    background: url(../../../icons/check2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: all 0.28s ease-in-out;
 }
 .code-snippet > .tabs {

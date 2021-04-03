@@ -88,6 +88,7 @@
     max-width: unset;
     min-width: unset;
     background: var(--primary-dark-color);
+    z-index: 2;
 }
 .side-bar.sidebar-static .list > .list-item > button {
     color: var(--light-bg);

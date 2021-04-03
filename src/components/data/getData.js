@@ -1687,20 +1687,20 @@ export function getData() {
                 cardText:
                     "Copy this snippet and paste it in your html page's body tag:",
                 codeSnippet: `
-                <div class="form-field primary-bg type-i bg-inherit radio-colored">
-                <label class="radio-label">
-                    <input
-                        type="radio"
-                        name="radio-check"
-                        class="input-radio"
-                        checked="checked"
-                    />
-                    <span class="radio-outer-circle">
-                        <p class="radio-inner-circle"></p>
-                    </span>
-                    <small>I'm the label from a checkbox</small>
-                </label>
-            </div>
+<div class="form-field primary-bg type-i bg-inherit radio-colored">
+    <label class="radio-label">
+        <input
+            type="radio"
+            name="radio-check"
+            class="input-radio"
+            checked="checked"
+        />
+        <span class="radio-outer-circle">
+            <p class="radio-inner-circle"></p>
+        </span>
+        <small>I'm the label from a checkbox</small>
+    </label>
+</div>
         `,
             },
             {

@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     display: none;
 }
 .body-dark .side-bar {
@@ -164,26 +164,23 @@
     position: fixed;
     height: 60px;
     width: 60px;
-    border-radius: 50%;
+    border-radius: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    background: var(--wave3);
     align-items: center;
-    bottom: 1.8rem;
-    right: 1rem;
-    z-index: 3;
-    background: linear-gradient(
-        268deg,
-        var(--wave1),
-        var(--wave2),
-        var(--wave3)
-
-    );
-    background-size: 1000% 1000%;
-    animation: colorAnimation 8s ease infinite;
-    border: 3px solid var(--light-color-100);
+    bottom: 8rem;
+    opacity: 0.98;
+    left: -1rem;
+    z-index: 2;
+    border: 4px var(--light-color-100);
+    border-style: dashed;
     box-shadow: var(--floating-btn-shadow-light);
+    transition: 0.3s ease-in-out;
 }
-
+.floating-menu:hover{
+    opacity: 1;
+}
 .side-bar.open {
     animation: 1s slideLeft 1;
     display: block;
@@ -225,38 +222,4 @@
 
 .body-dark .floating-menu > i {
     color: var(--green-dark-50);
-}
-
-@-webkit-keyframes colorAnimation {
-    0% {
-        background-position: 0% 52%;
-    }
-    50% {
-        background-position: 100% 49%;
-    }
-    100% {
-        background-position: 0% 52%;
-    }
-}
-@-moz-keyframes colorAnimation {
-    0% {
-        background-position: 0% 52%;
-    }
-    50% {
-        background-position: 100% 49%;
-    }
-    100% {
-        background-position: 0% 52%;
-    }
-}
-@keyframes colorAnimation {
-    0% {
-        background-position: 0% 52%;
-    }
-    50% {
-        background-position: 100% 49%;
-    }
-    100% {
-        background-position: 0% 52%;
-    }
 }
