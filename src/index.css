@@ -32,8 +32,6 @@ body,html {
     background: transparent;
     overflow: hidden;
     z-index: -1;
-    /* scale: 0.5; */
-    /* transform: rotate3d(0,0,1,50deg); */
 }
 
 .wave {
@@ -90,7 +88,7 @@ body[class*="body-dark"]{
     }
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar, ::-sc {
     width: 0px;
     position: relative;
     z-index: -1;
@@ -114,6 +112,8 @@ body[class*="body-dark"]{
     position: relative;
     z-index: -1;
 }
+
+
 
 .body-dark ::-webkit-scrollbar-thumb {
     background: var(--wave3-dark);

@@ -91,7 +91,9 @@
 }
 
 /* coding tag end */
-
+*{
+    scrollbar-width: none;
+}
 .body-container {
     width: 100vw;
     height: 100vh;
@@ -100,6 +102,7 @@
     color: var(--text-color);
     font-weight: 500;
     overflow: auto;
+    scrollbar-width: none;
 }
 
 h3 {

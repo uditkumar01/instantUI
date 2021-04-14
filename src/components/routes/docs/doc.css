@@ -132,6 +132,7 @@
 .doc-container > .doc-body {
     background: inherit;
     overflow-y: auto;
+    scrollbar-width: none;
 }
 .doc-container > .doc-body > .ui-card.ui-card-horizontal {
     background: inherit;
