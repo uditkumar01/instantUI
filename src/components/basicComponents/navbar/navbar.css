@@ -89,14 +89,20 @@
     grid-template-columns: repeat(3, 1fr);
     z-index: 1;
 }
-.ui-navbar > .ui-nav-brand > .ui-text {
+.ui-navbar .ui-nav-brand .ui-text {
     font-size: 1.4rem;
     font-weight: 700;
     display: inline-flex;
     position: relative;
     padding: 0 1rem;
 }
-.ui-navbar > .ui-nav-brand > .ui-text > .ui-thunder {
+.nav-logo-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+.ui-navbar .ui-nav-brand .ui-text .ui-thunder {
     position: absolute;
     fill: url(#MyGradient);
     width: 20px;
@@ -104,49 +110,49 @@
     top: -8%;
     left: 33%;
 }
-.ui-navbar.ui-light-style > .ui-nav-brand > .ui-text > .ui-thunder {
+.ui-navbar.ui-light-style .ui-nav-brand .ui-text .ui-thunder {
     fill: var(--wave3);
 }
 
-.ui-navbar > .ui-nav-brand > .ui-text > .ui-thunder > svg {
+.ui-navbar .ui-nav-brand .ui-text .ui-thunder svg {
     transform: rotate3d(0, 0, 1, 16deg);
 }
-.ui-navbar > .ui-nav-brand {
+.ui-navbar .ui-nav-brand {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--light-bg);
 }
-.ui-navbar > .ui-nav-brand > p {
+.ui-navbar .ui-nav-brand p {
     font-size: 1.2rem;
     font-weight: 700;
 }
-.ui-navbar > .ui-nav-brand > .ui-text {
+.ui-navbar .ui-nav-brand .ui-text {
     font-size: 1.45rem;
     font-weight: 700;
 }
 .ui-navbar.ui-light-style {
     background: var(--light-bg);
 }
-.ui-navbar.ui-light-style > .ui-nav-brand {
+.ui-navbar.ui-light-style .ui-nav-brand {
     color: var(--wave1);
 }
-.ui-navbar.ui-light-style > .ui-list > .ui-list-item {
+.ui-navbar.ui-light-style .ui-list .ui-list-item {
     color: var(--wave1);
 }
-.ui-navbar > .ui-list {
+.ui-navbar .ui-list {
     display: flex;
     list-style-type: none;
     justify-content: center;
     align-items: center;
 }
-.ui-navbar > .ui-list > .ui-list-item,
-.ui-navbar > .ui-nav-brand {
+.ui-navbar .ui-list .ui-list-item,
+.ui-navbar .ui-nav-brand {
     padding: 0.9rem 0.9rem;
     margin: 0 0.1rem;
 }
-.ui-navbar > .ui-list > .ui-list-item {
+.ui-navbar .ui-list .ui-list-item {
     position: relative;
     cursor: pointer;
     font-weight: 500;
@@ -154,7 +160,7 @@
     color: var(--light-bg);
     /* background: chartreuse; */
 }
-.ui-navbar > .ui-list > .ui-list-item > hr {
+.ui-navbar .ui-list .ui-list-item hr {
     background: var(--light-color-nav);
     height: 3px;
     position: absolute;
@@ -164,34 +170,34 @@
     bottom: 0;
     transition: all 0.28s ease-in-out;
 }
-.ui-navbar > .ui-list > .ui-list-item.search-here {
+.ui-navbar .ui-list .ui-list-item.search-here {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
 }
-.ui-navbar > .ui-list > .ui-list-item.search-here > input[type="text"] {
+.ui-navbar .ui-list .ui-list-item.search-here input[type="text"] {
     height: 1.65rem;
     border-radius: 2px;
     padding: 0.5rem;
 }
-.ui-navbar > .ui-list > .ui-list-item:hover,
-.ui-navbar > .ui-list > .ui-list-item.active {
+.ui-navbar .ui-list .ui-list-item:hover,
+.ui-navbar .ui-list .ui-list-item.active {
     background: var(--light-nav-hover);
 }
-.body-dark .ui-navbar > .ui-list > .ui-list-item:hover,
-.body-dark .ui-navbar > .ui-list > .ui-list-item.active {
+.body-dark .ui-navbar .ui-list .ui-list-item:hover,
+.body-dark .ui-navbar .ui-list .ui-list-item.active {
     background: var(--dark-nav-hover);
 }
-.ui-navbar > .ui-list > .ui-list-item:hover > hr,
-.ui-navbar > .ui-list > .ui-list-item.active > hr {
+.ui-navbar .ui-list .ui-list-item:hover hr,
+.ui-navbar .ui-list .ui-list-item.active hr {
     transform: scaleX(1);
 }
-.ui-navbar > .ui-list:last-child > .ui-list-item.ui-btn:hover {
+.ui-navbar .ui-list:last-child .ui-list-item.ui-btn:hover {
     background: var(--lighter-bg);
     border-color: var(--primary-dark-color);
 }
-.ui-navbar > .ui-list:last-child > .ui-list-item.ui-btn {
+.ui-navbar .ui-list:last-child .ui-list-item.ui-btn {
     padding: 0.35rem 1rem;
     font-weight: 600;
     color: var(--wave1);
@@ -200,37 +206,37 @@
     border-radius: 50px;
     transition: all 0.28s ease-in-out;
 }
-.ui-navbar.ui-light-style > .ui-list > .ui-list-item > hr {
+.ui-navbar.ui-light-style .ui-list .ui-list-item hr {
     background: var(--wave3);
 }
-.ui-navbar > .ui-list:last-child > .ui-list-item.ui-btn {
+.ui-navbar .ui-list:last-child .ui-list-item.ui-btn {
     background: var(--wave1);
     color: var(--light-bg);
 }
-.ui-navbar > .ui-list:last-child > .ui-list-item.ui-btn:hover {
+.ui-navbar .ui-list:last-child .ui-list-item.ui-btn:hover {
     background: var(--wave2);
 }
 
 /* dark-mode */
 
-.body-dark .ui-navbar > .ui-list:last-child > .ui-list-item.ui-btn {
+.body-dark .ui-navbar .ui-list:last-child .ui-list-item.ui-btn {
     background: var(--wave3-dark);
     color: var(--green-dark-50);
     border-color: var(--green-dark-200);
 }
-.body-dark .ui-navbar > .ui-list:last-child > .ui-list-item.ui-btn:hover {
+.body-dark .ui-navbar .ui-list:last-child .ui-list-item.ui-btn:hover {
     background: var(--wave2-dark);
     color: var(--green-dark-50);
     border-color: var(--green-dark-50);
 }
-.body-dark .ui-navbar > .ui-nav-brand,
-.body-dark .ui-navbar > .ui-list > .ui-list-item {
+.body-dark .ui-navbar .ui-nav-brand,
+.body-dark .ui-navbar .ui-list .ui-list-item {
     color: var(--green-dark-50);
 }
-.body-dark .ui-navbar > .ui-list > .ui-list-item > hr {
+.body-dark .ui-navbar .ui-list .ui-list-item hr {
     background: var(--green-dark-50);
 }
-.body-dark .ui-navbar > .ui-nav-brand svg {
+.body-dark .ui-navbar .ui-nav-brand svg {
     fill: var(--light-bg);
 }
 .body-dark .ui-navbar.ui-light-style {
@@ -269,18 +275,18 @@
         /* background: red; */
         grid-template-columns: 1fr 0.8fr;
     }
-    .ui-navbar > .ui-list {
+    .ui-navbar .ui-list {
         /* background: red; */
     }
-    .ui-navbar > .ui-list:nth-child(2) {
+    .ui-navbar .ui-list:nth-child(2) {
         display: none;
     }
 }
 @media only screen and (max-width: 580px) {
-    .ui-navbar > .ui-list:last-child > .ui-list-item.ui-btn {
+    .ui-navbar .ui-list:last-child .ui-list-item.ui-btn {
         display: none;
     }
-    .ui-navbar > .ui-list:last-child {
+    .ui-navbar .ui-list:last-child {
         justify-content: center;
     }
     .ui-navbar .theme-btn{

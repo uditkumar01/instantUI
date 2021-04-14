@@ -1,87 +1,34 @@
 import "./App.css";
-import {
-    NavBar,
-    HomeContent,
-    SideBar,
-    DocHomeContent,
-} from "./components/index";
 import { useEffect, useState } from "react";
 import { getData } from "./components/data/getData";
-
-function HomeRoute({ setCurrentRoute, currentRoute, data, theme, setTheme }) {
-    const [lightNavColor, setLightNavColor] = useState(false);
-    return (
-        <>
-            <NavBar
-                lightNavColor={lightNavColor}
-                setCurrentRoute={setCurrentRoute}
-                currentRoute={currentRoute}
-                theme={theme}
-                setTheme={setTheme}
-            />
-            <SideBar
-                setCurrentRoute={setCurrentRoute}
-                currentRoute={currentRoute}
-            />
-            <HomeContent
-                lightNavColor={lightNavColor}
-                setLightNavColor={setLightNavColor}
-                setCurrentRoute={setCurrentRoute}
-            />
-        </>
-    );
-}
-
-function DocRoute({ data, setCurrentRoute, currentRoute, theme, setTheme }) {
-    return (
-        <>
-            <DocHomeContent
-                data={data}
-                setCurrentRoute={setCurrentRoute}
-                currentRoute={currentRoute}
-                theme={theme}
-                setTheme={setTheme}
-            />
-        </>
-    );
-}
+import { AllRoutes } from "./components";
 
 function App() {
-    const [currentRoute, setCurrentRoute] = useState("home");
     const [data, setData] = useState(() => getData());
     // true means light theme is active
     const [theme, setTheme] = useState(true);
     useEffect(() => {
+        console.log(JSON.stringify(localStorage));
+        if (localStorage.getItem("darkThemeIUI") !== null) {
+            setTheme(() => false);
+        }
+    }, []);
+    useEffect(() => {
         if (theme) {
             document.body.className = "";
+            localStorage.removeItem("darkThemeIUI");
         } else {
             document.body.className = "body-dark";
+            localStorage.setItem("darkThemeIUI", "true");
         }
     }, [theme]);
     return (
         <div className="App">
-            {
-                {
-                    home: (
-                        <HomeRoute
-                            setCurrentRoute={setCurrentRoute}
-                            currentRoute={currentRoute}
-                            data={data}
-                            theme={theme}
-                            setTheme={setTheme}
-                        />
-                    ),
-                    docs: (
-                        <DocRoute
-                            data={data}
-                            setCurrentRoute={setCurrentRoute}
-                            currentRoute={currentRoute}
-                            theme={theme}
-                            setTheme={setTheme}
-                        />
-                    ),
-                }[currentRoute]
-            }
+            <AllRoutes
+                data={data}
+                theme={theme}
+                setTheme={setTheme}
+            />
         </div>
     );
 }

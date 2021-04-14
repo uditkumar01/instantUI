@@ -1,5 +1,5 @@
 export { NavBar } from "./basicComponents/navbar/navbar";
-export { HomeContent, CardWithCode } from "./routes/home/homeContent/HomeContent";
+export { Home, CardWithCode } from "./routes/home/Home";
 export { SideBar } from "./basicComponents/sideBar/sideBar";
-export { DocHomeContent, } from "./routes/docs/docHomeContent/docHomeContent";
-
+export { Doc } from "./routes/docs/Doc";
+export { AllRoutes } from "./routes/route";

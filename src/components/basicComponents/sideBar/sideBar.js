@@ -1,7 +1,8 @@
 import "./sideBar.css";
 import React, { useState } from "react";
 import { capitalize } from "../../utils";
-export function SideBar({ dataKeysList, activeComponent, setActiveComponent, setCurrentRoute, currentRoute }) {
+import { NavLink } from "react-router-dom";
+export function SideBar({ dataKeysList, activeComponent, setActiveComponent }) {
     const [list1, setList1] = useState(false);
     // const [list2, setList2] = useState(false);
     const [sideBarDisplay, setSideBarDisplay] = useState(false);
@@ -16,7 +17,11 @@ export function SideBar({ dataKeysList, activeComponent, setActiveComponent, set
                 }}
             >
                 <i
-                    className={!sideBarDisplay ? "fas fa-chevron-right" : "fas fa-chevron-left"}
+                    className={
+                        !sideBarDisplay
+                            ? "fas fa-chevron-right"
+                            : "fas fa-chevron-left"
+                    }
                 ></i>
             </button>
             <div
@@ -36,27 +41,39 @@ export function SideBar({ dataKeysList, activeComponent, setActiveComponent, set
                     instant UI
                 </div>
                 <ul className="list">
-                    <li className={currentRoute==="home"?"list-item active":"list-item"}>
-                        <button onClick={()=>setCurrentRoute(()=>"home")}>Home</button>
+                    <li className={"list-item"}>
+                        <NavLink to="/">
+                            <button>Home</button>
+                        </NavLink>
                     </li>
                     <li className={"list-item drop"}>
-                        <button
-                            onClick={() => {
-                                dataKeysList?setList1(!list1):setCurrentRoute("docs")
-                            }}
-                        >
-                            Docs
-                           {dataKeysList?<a
-                                className={
-                                    list1
-                                        ? "fas fa-chevron-down down"
-                                        : "fas fa-chevron-up down"
+                        {dataKeysList ? (
+                            <button
+                                onClick={() =>
+                                    dataKeysList ? setList1(!list1) : ""
                                 }
-                                onClick={() => {
-                                    setList1(!list1);
-                                }}
-                            ></a>:""}
-                        </button>
+                            >
+                                Docs
+                                {dataKeysList ? (
+                                    <a
+                                        className={
+                                            list1
+                                                ? "fas fa-chevron-down down"
+                                                : "fas fa-chevron-up down"
+                                        }
+                                        onClick={() => {
+                                            setList1(!list1);
+                                        }}
+                                    ></a>
+                                ) : (
+                                    ""
+                                )}
+                            </button>
+                        ) : (
+                            <NavLink to="/docs">
+                                <button>Docs</button>
+                            </NavLink>
+                        )}
 
                         <ul
                             className="list"
@@ -66,24 +83,33 @@ export function SideBar({ dataKeysList, activeComponent, setActiveComponent, set
                                     : { display: "none" }
                             }
                         >
-                            {dataKeysList?dataKeysList.map((componentName) => {
-                                return (
-                                    <li
-                                        className={
-                                            activeComponent === componentName
-                                                ? "list-item active"
-                                                : "list-item"
-                                        }
-                                    >
-                                        <button onClick={()=>setActiveComponent(componentName)}>
-                                            {capitalize(componentName)}
-                                        </button>
-                                    </li>
-                                );
-                            }):""}
+                            {dataKeysList
+                                ? dataKeysList.map((componentName) => {
+                                        return (
+                                            <li
+                                                className={
+                                                    activeComponent ===
+                                                    componentName
+                                                        ? "list-item active"
+                                                        : "list-item"
+                                                }
+                                            >
+                                                <button
+                                                    onClick={() =>
+                                                        setActiveComponent(
+                                                            componentName
+                                                        )
+                                                    }
+                                                >
+                                                    {capitalize(componentName)}
+                                                </button>
+                                            </li>
+                                        );
+                                    })
+                                : ""}
                         </ul>
                     </li>
-                    <li className={currentRoute==="examples"?"list-item active":"list-item"}>
+                    <li className="list-item">
                         <button>Examples</button>
                     </li>
                 </ul>

@@ -90,8 +90,12 @@
     background: var(--primary-dark-color);
     z-index: 2;
 }
-.side-bar.sidebar-static .list > .list-item > button {
+.side-bar.sidebar-static .list > .list-item button {
     color: var(--light-bg);
+    background: inherit;
+    padding: 1rem 1.3rem;
+    text-align: left;
+    width: 100%;
 }
 .side-bar.sidebar-static .list .list-item button:focus,
 .side-bar.sidebar-static .list .list-item button:hover,

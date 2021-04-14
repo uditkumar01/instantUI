@@ -1,4 +1,4 @@
-import uuid from "react-uuid";
+import {v4 as uuid} from "uuid";
 export function getData() {
     const data = {
         navbars: [

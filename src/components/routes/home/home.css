@@ -312,7 +312,7 @@ h3 {
 }
 .body-dark .ui-card > .text-section > .ui-card-body > .text > .code-snippet > .copy {
     background: var(--green-dark-200);
-    background: url(../../../icons/copyD.png);
+    background: url(../../icons/copyD.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -325,7 +325,7 @@ h3 {
     > .code-snippet
     > .copy:focus {
     background: var(--green-dark-50);
-    background: url(../../../icons/check2.png);
+    background: url(../../icons/check2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -419,7 +419,7 @@ h3 {
     border-radius: 10%;
     cursor: pointer;
     transition: all 0.28s ease-in-out;
-    background: url(../../../icons/copyL.png);
+    background: url(../../icons/copyL.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -427,7 +427,7 @@ h3 {
 }
 .code-snippet > .copy:active,
 .code-snippet > .copy:focus {
-    background: url(../../../icons/check2.png);
+    background: url(../../icons/check2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

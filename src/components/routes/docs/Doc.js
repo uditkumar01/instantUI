@@ -1,18 +1,13 @@
-import "./docHomeContent.css";
-import { CardWithCode, SideBar } from "../../../index";
+import "./doc.css";
+import { CardWithCode, SideBar } from "../../index";
 import React, { useState, useEffect } from "react";
-import "../../../../components.css";
-import { capitalize } from "../../../utils";
-import { NavBar } from "../../../basicComponents/navbar/navbar";
-function DocSideBar({
-    dataKeysList,
-    activeComponent,
-    setActiveComponent,
-    setCurrentRoute,
-    currentRoute,
-}) {
+import "../../../components.css";
+import { capitalize } from "../../utils";
+import { NavBar } from "../../basicComponents/navbar/navbar";
+import { NavLink } from "react-router-dom";
+function DocSideBar({ dataKeysList, activeComponent, setActiveComponent }) {
     const [list1, setList1] = useState(false);
-    // const [list2, setList2] = useState(false);
+
     return (
         <div className={"side-bar open sidebar-static"}>
             <ul className="list">
@@ -20,16 +15,10 @@ function DocSideBar({
                 <br />
                 <br />
                 <br />
-                <li
-                    className={
-                        currentRoute === "home"
-                            ? "list-item active"
-                            : "list-item"
-                    }
-                >
-                    <button onClick={() => setCurrentRoute(() => "home")}>
-                        Home
-                    </button>
+                <li className={"list-item"}>
+                    <NavLink to="/">
+                        <button>Home</button>
+                    </NavLink>
                 </li>
                 <li className={"list-item drop"}>
                     <button
@@ -41,8 +30,8 @@ function DocSideBar({
                         <a
                             className={
                                 list1
-                                    ? "fas fa-chevron-down down"
-                                    : "fas fa-chevron-up down"
+                                    ? "fas fa-chevron-up down"
+                                    : "fas fa-chevron-down down"
                             }
                             onClick={() => {
                                 setList1(!list1);
@@ -77,13 +66,7 @@ function DocSideBar({
                         })}
                     </ul>
                 </li>
-                <li
-                    className={
-                        currentRoute === "examples"
-                            ? "list-item active"
-                            : "list-item"
-                    }
-                >
+                <li className="list-item">
                     <button>Examples</button>
                 </li>
             </ul>
@@ -136,21 +119,11 @@ function DocScrollSpy({ scrollSpyData }) {
         </div>
     );
 }
-export function DocHomeContent({
-    data,
-    setCurrentRoute,
-    currentRoute,
-    theme,
-    setTheme,
-}) {
+export function Doc({ data, theme, setTheme }) {
     const [staticSideBar, setStaticSidebar] = useState(true);
     const dataKeysList = Object.keys(data);
     const [activeComponent, setActiveComponent] = useState(dataKeysList[0]);
-    // useEffect(()=>{
-    //     setActiveComponent(dataKeysList[0]);
-    // },[dataKeysList[0]]);
 
-    // console.log("domehome",currentRoute);
     useEffect(() => {
         function handleResize() {
             setStaticSidebar((staticSideBar) => {
@@ -185,8 +158,6 @@ export function DocHomeContent({
             <div className="nav-fixed">
                 <NavBar
                     lightNavColor={true}
-                    setCurrentRoute={setCurrentRoute}
-                    currentRoute={currentRoute}
                     theme={theme}
                     setTheme={setTheme}
                 />
@@ -196,9 +167,6 @@ export function DocHomeContent({
                     <SideBar
                         dataKeysList={dataKeysList}
                         activeComponent={activeComponent}
-                        setActiveComponent={setActiveComponent}
-                        setCurrentRoute={setCurrentRoute}
-                        currentRoute={currentRoute}
                     />
                 ) : (
                     <div className="doc-left-side">
@@ -206,8 +174,6 @@ export function DocHomeContent({
                             dataKeysList={dataKeysList}
                             activeComponent={activeComponent}
                             setActiveComponent={setActiveComponent}
-                            setCurrentRoute={setCurrentRoute}
-                            currentRoute={currentRoute}
                         />
                     </div>
                 )}

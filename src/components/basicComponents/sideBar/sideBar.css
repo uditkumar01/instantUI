@@ -13,13 +13,13 @@
 .body-dark .side-bar {
     background: var(--wave2-dark);
 }
-.side-bar > .nav-brand {
+.side-bar .nav-brand {
     padding: 1.15rem 1.3rem;
     padding-right: 0;
     cursor: pointer;
     font-weight: 700;
 }
-.side-bar .list > .list-item {
+.side-bar .list .list-item {
     list-style-type: none;
     padding-right: 0;
     position: relative;
@@ -29,7 +29,7 @@
     /* border: 2px solid green; */
     cursor: pointer;
 }
-.side-bar .list > .list-item > button {
+.side-bar .list .list-item button {
     /* border: 2px solid blueviolet; */
     /* padding: 1rem; */
     border-radius: 0px;
@@ -38,13 +38,13 @@
     position: relative;
     cursor: pointer;
 }
-.side-bar .list > .list-item > button > .down {
+.side-bar .list .list-item button .down {
     position: absolute;
     font-size: 0.7rem;
     right: 1rem;
-    top: 1rem;
+    top: 1.3rem;
 }
-.side-bar .list > .list-item > button {
+.side-bar .list .list-item button {
     font-weight: 500;
     /* background: red; */
     font-size: 0.96rem;
@@ -53,8 +53,8 @@
     padding: 0.8rem 1.3rem;
     transition: all 0.05s ease-in-out;
 }
-.side-bar .list > .list-item > button:focus ~ .list .list-item button,
-.side-bar .list > .list-item > a:focus ~ .list .list-item button {
+.side-bar .list .list-item button:focus ~ .list .list-item button,
+.side-bar .list .list-item a:focus ~ .list .list-item button {
     transition: all 0.1s ease-in-out;
     animation: 0.28s collapseHeight 1 reverse;
 }
@@ -71,7 +71,7 @@
 .body-dark .side-bar .list .list-item.active button {
     background: var(--wave1-dark);
     color: var(--green-dark-50);
-    border: none;
+    border-left: 4px solid var(--green-dark-100);
 }
 .body-dark .side-bar .list .list-item button ~ .fa-caret-down,
 .body-dark .side-bar .list .list-item button ~ .fa-caret-down {
@@ -82,7 +82,7 @@
 .side-bar .list .list-item.active button ~ .fa-caret-down {
     color: var(--light-bg);
 }
-.side-bar .list > .list-item > .list > .list-item > button {
+.side-bar .list .list-item .list .list-item button {
     padding: 0.8rem 2.8rem;
 }
 .body-dark .side-bar .list button{
@@ -90,24 +90,24 @@
 }
 .side-bar
     .list
-    > .list-item
-    > .list
-    > .list-item
-    > .list
-    > .list-item
-    > button {
+    .list-item
+    .list
+    .list-item
+    .list
+    .list-item
+    button {
     padding: 0.8rem 4.3rem;
 }
 .side-bar
     .list
-    > .list-item
-    > .list
-    > .list-item
-    > .list
-    > .list-item
-    > .list
-    > .list-item
-    > button {
+    .list-item
+    .list
+    .list-item
+    .list
+    .list-item
+    .list
+    .list-item
+    button {
     padding: 0.8rem 5.8rem;
 }
 @keyframes collapseHeight {
@@ -122,14 +122,14 @@
     }
 }
 
-.side-bar > .nav-brand > .text {
+.side-bar .nav-brand .text {
     font-size: 1.4rem;
     font-weight: 700;
     display: inline-flex;
     position: relative;
     padding: 0 1rem;
 }
-.side-bar > .nav-brand > .text > .thunder {
+.side-bar .nav-brand .text .thunder {
     position: absolute;
     fill: var(--myBg);
     width: 20px;
@@ -137,14 +137,14 @@
     top: -8%;
     left: 33%;
 }
-.side-bar.light-style > .nav-brand > .text > .thunder {
+.side-bar.light-style .nav-brand .text .thunder {
     fill: var(--wave3);
 }
 
-.side-bar > .nav-brand > .text > .thunder > svg {
+.side-bar .nav-brand .text .thunder svg {
     transform: rotate3d(0, 0, 1, 16deg);
 }
-.side-bar > .nav-brand {
+.side-bar .nav-brand {
     font-weight: 700;
     font-size: 1.2rem;
     cursor: pointer;
@@ -154,7 +154,7 @@
     align-items: center;
     color: var(--wave1);
 }
-.body-dark .side-bar > .nav-brand {
+.body-dark .side-bar .nav-brand {
     color: var(--green-dark-50);
 }
 .m-0 {
@@ -203,7 +203,7 @@
     }
 }
 
-.floating-menu > i {
+.floating-menu i {
     color: var(--light-bg);
 }
 
@@ -220,6 +220,6 @@
     border-color: var(--green-dark-50);
 }
 
-.body-dark .floating-menu > i {
+.body-dark .floating-menu i {
     color: var(--green-dark-50);
 }

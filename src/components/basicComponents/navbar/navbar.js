@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
-export function NavBar({ lightNavColor, setCurrentRoute , currentRoute, theme, setTheme}) {
+export function NavBar({ lightNavColor, theme, setTheme}) {
     
     // console.log("checking",currentRoute==="docs",currentRoute);
     return (
         <nav className={lightNavColor ? "ui-navbar ui-light-style" : "ui-navbar"}>
             <div className="ui-nav-brand">
+                <NavLink to="/" className="nav-logo-link">
                 <p className="ui-text">
                     U
                     <span className="ui-thunder">
                         <svg
                             className="ui-lightning-container"
                             xmlns="http://www.w3.org/2000/svg"
-                            xmlns="http://www.w3.org/1999/xlink"
                             viewBox="-243.6 360 41.6 73.7"
                         >
                             <defs>
@@ -39,24 +40,25 @@ export function NavBar({ lightNavColor, setCurrentRoute , currentRoute, theme, s
                     </span>
                 </p>
                 <p>instant UI</p>
+                </NavLink>
             </div>
             <ul className="ui-list">
-                <li className={currentRoute==="home"?"ui-list-item active":"ui-list-item"} onClick={()=>{setCurrentRoute(()=>"home")}}>
+                <NavLink className={"ui-list-item"} activeClassName={"active"} to="/" end>
                     Home
                     <hr />
-                </li>
-                <li className={currentRoute==="docs"?"ui-list-item active":"ui-list-item"} onClick={()=>{setCurrentRoute(()=>"docs")}}>
+                </NavLink>
+                <NavLink className={"ui-list-item"} activeClassName={"active"} to="/docs">
                     Docs
                     <hr />
-                </li>
-                <li className={currentRoute==="examples"?"ui-list-item active":"ui-list-item"}>
+                </NavLink>
+                <li className={"ui-list-item"}>
                     Examples
                     <hr />
                 </li>
             </ul>
             <ul className="ui-list">
                 {/* <li className="ui-list-item search-here"><input type="text" placeholder="search"/></li> */}
-                <li className="ui-list-item ui-btn ui-btn-light" onClick={()=>{setCurrentRoute(()=>"docs")}}>Get Started</li>
+                <NavLink className="ui-list-item ui-btn ui-btn-light" to="/docs">Get Started</NavLink>
                 <i
                     class={
                         theme ? "fas fa-moon theme-btn" : "fas fa-sun theme-btn"

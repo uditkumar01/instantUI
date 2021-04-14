@@ -1,12 +1,12 @@
-import "../../../../components.css";
-import React, { useState, useEffect } from "react";
-import "./homeContent.css";
-import { highLightKeywords, capitalize } from "../../../utils";
-import "../../../../components.css";
+import React from "react";
+import "./home.css";
+import { highLightKeywords, capitalize } from "../../utils";
+import "../../../components.css";
 import parser from "html-react-parser";
-import uuid from "react-uuid";
+import { v4 as uuid } from "uuid";
+import { NavLink } from "react-router-dom";
 
-function BodyHeader({setCurrentRoute}) {
+function BodyHeader() {
     return (
         <div className="body-header">
             <div class="wave-wrapper">
@@ -21,7 +21,6 @@ function BodyHeader({setCurrentRoute}) {
                         <svg
                             className="lightning-container"
                             xmlns="http://www.w3.org/2000/svg"
-                            xmlns="http://www.w3.org/1999/xlink"
                             viewBox="-243.6 360 41.6 73.7"
                         >
                             <defs>
@@ -59,7 +58,12 @@ function BodyHeader({setCurrentRoute}) {
                     understanding.
                 </p>
                 <span className="btn-contain">
-                    <a className="gs-btn btn-light" onClick={()=>setCurrentRoute(()=>"docs")}>Get Started</a>
+                    <NavLink
+                        className="gs-btn btn-light"
+                        to="/docs"
+                    >
+                        Get Started
+                    </NavLink>
                     <a className="gs-btn btn-light-br">Download</a>
                 </span>
                 <br />
@@ -126,10 +130,12 @@ export function CardWithCode({ data, activeComponent }) {
                 </div>
                 <div className="ui-card-body">
                     <p className="text">
-                        {data?data.map((item) => {
-                            // console.log(data.)
-                            return <CodeSnippetItem item={item} />;
-                        }):""}
+                        {data
+                            ? data.map((item) => {
+                                  // console.log(data.)
+                                  return <CodeSnippetItem item={item} />;
+                              })
+                            : ""}
                     </p>
                 </div>
                 <div className="ui-card-footer">
@@ -238,7 +244,7 @@ export function SmCardWithCode({ data }) {
         </>
     );
 }
-export function HomeContent({ lightNavColor, setLightNavColor, setCurrentRoute }) {
+export function Home({ lightNavColor, setLightNavColor }) {
     const bodyContainerRef = React.createRef();
     const cardData = [
         {
@@ -314,7 +320,7 @@ export function HomeContent({ lightNavColor, setLightNavColor, setCurrentRoute }
             className="body-container"
             onScroll={navColorHandler}
         >
-            <BodyHeader setCurrentRoute={setCurrentRoute}/>
+            <BodyHeader />
             <div className="body-content">
                 <div className="home-card-container">
                     {cardData.map((data) => {

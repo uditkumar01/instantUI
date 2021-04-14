@@ -53,6 +53,7 @@ export function highLightKeywords(codeSnippet) {
         //   console.log("here",codeSnippet);
 
         //   console.log("---------------------------------------");
+        return -1;
     });
     // link-tag-highlight
     codeSnippet = codeSnippet.replace(
