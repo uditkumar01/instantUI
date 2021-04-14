@@ -19,8 +19,8 @@ export function SideBar({ dataKeysList, activeComponent, setActiveComponent }) {
                 <i
                     className={
                         !sideBarDisplay
-                            ? "fas fa-chevron-left"
-                            : "fas fa-chevron-right"
+                            ? "fas fa-chevron-right"
+                            : "fas fa-chevron-left"
                     }
                 ></i>
             </button>
@@ -35,7 +35,7 @@ export function SideBar({ dataKeysList, activeComponent, setActiveComponent }) {
                                 setSideBarDisplay(!sideBarDisplay);
                             }}
                         >
-                            <i className="fas fa-chevron-right"></i>
+                            <i className="fas fa-chevron-left"></i>
                         </button>
                     </p>
                     instant UI
