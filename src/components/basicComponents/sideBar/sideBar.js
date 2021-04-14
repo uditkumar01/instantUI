@@ -58,8 +58,8 @@ export function SideBar({ dataKeysList, activeComponent, setActiveComponent }) {
                                     <a
                                         className={
                                             list1
-                                                ? "fas fa-chevron-down down"
-                                                : "fas fa-chevron-up down"
+                                                ? "fas fa-chevron-up down"
+                                                : "fas fa-chevron-down down"
                                         }
                                         onClick={() => {
                                             setList1(!list1);
