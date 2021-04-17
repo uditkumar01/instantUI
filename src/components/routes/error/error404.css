@@ -1,0 +1,149 @@
+.error-container {
+    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/f1d0d572816947.5c2bcd89d519b.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Quicksand";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.error-container img {
+    position: absolute;
+}
+.error-container img:nth-child(2) {
+    width: 19%;
+    right: -10%;
+    bottom: -10%;
+    z-index: 0;
+    scale: 0.5;
+    transform: rotateZ(-100deg);
+    animation: rocket 20s infinite ease-in-out;
+}
+.error-container img:nth-child(1) {
+    width: 19%;
+    left: 20%;
+    bottom: -10%;
+    z-index: 0;
+    animation: astronaut 20s infinite ease-in-out;
+}
+@keyframes rocket {
+    0% {
+        right: -20%;
+        bottom: -20%;
+        scale: 1.2;
+    }
+    25% {
+        transform: rotateZ(-100deg);
+    }
+    40% {
+        right: 20%;
+        bottom: 20%;
+        scale: 1.5;
+        transform: rotateZ(-45deg);
+    }
+    80% {
+        right: -10%;
+        bottom: 60%;
+        scale: 1.8;
+    }
+    100% {
+        right: 60%;
+        bottom: 120%;
+        scale: 2.8;
+    }
+}
+@keyframes astronaut {
+    0% {
+        left: 30%;
+        top: -25%;
+        scale: 1.4;
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        left: -40%;
+        top: 85%;
+        scale: 2.8;
+        transform: rotate(0deg);
+    }
+}
+.error {
+    /* background: red; */
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: float2 1s infinite ease-in-out;
+}
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+@keyframes float2 {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.error p {
+    font-size: 16rem;
+    font-weight: 700;
+    color: rgb(167, 136, 253);
+    padding-bottom: 1rem;
+    animation: float 3s infinite ease-in-out;
+}
+.error button[class*="btn"] {
+    background: rgb(233, 34, 200);
+    color: rgb(59, 20, 167);
+    transition: 0.25s all ease-in-out;
+    /* padding: 1.5vh 2.5vh; */
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.error button[class*="btn"]:hover,
+.error button[class*="btn"]:focus,
+.error button[class*="btn"]:active {
+    background: rgb(179, 6, 150);
+    color: rgb(237, 233, 248);
+}
+
+@media only screen and (max-width: 870px) {
+    .error p {
+        font-size: 10rem;
+    }
+    .error button[class*="btn"] {
+        color: rgb(59, 20, 167);
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .error p {
+        font-size: 9rem;
+    }
+    .error button[class*="btn"] {
+        color: rgb(59, 20, 167);
+        font-size: 1.2rem;
+    }
+}
