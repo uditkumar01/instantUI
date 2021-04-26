@@ -1941,7 +1941,7 @@ textarea:focus {
 }
 .form-field .checkbox-label .input-checkbox {
     width: auto;
-    opacity: 0.000001;
+    opacity: 0;
     position: absolute;
     z-index: 2;
     left: 0;
