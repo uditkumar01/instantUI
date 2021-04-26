@@ -2015,7 +2015,7 @@ textarea:focus {
     border: 2px solid;
 }
 .form-field .radio-label .input-radio {
-    opacity: 0.0000001;
+    opacity: 0;
     margin-left: 0.3rem;
 }
 .form-field small {
