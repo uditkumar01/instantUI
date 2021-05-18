@@ -1644,14 +1644,13 @@ textarea:focus {
     color: var(--alert-normal-blue);
     padding: 0rem 1rem;
     border-radius: 5px;
-    width: 70%;
+    width: 700px;
     min-width: 300px;
-    max-width: 700px;
     margin: 0.5rem;
 }
 .alert .alert-header {
     padding: 0.7rem 0.3rem;
-    padding-right: 0rem;
+    padding-right: 0;
     padding-bottom: 0.3rem;
 }
 .alert .alert-body {
@@ -1661,7 +1660,6 @@ textarea:focus {
     border-top: 1px dashed var(--alert-muted-blue);
 }
 .alert .alert-header .close-btn {
-    float: right;
     cursor: pointer;
     position: relative;
     top: -0.4rem;
