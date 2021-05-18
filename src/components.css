@@ -2070,7 +2070,7 @@ textarea:focus {
         font-size: 0.82rem;
     }
     .alert-container .alert {
-        max-width: 90%;
+        max-width: 80%;
         margin: 0;
     }
 }
