@@ -2057,3 +2057,11 @@ textarea:focus {
 .fix-floating-btn{
     position: static;
 }
+
+/* alert media query */
+
+@media only screen and (max-width: 480px) {
+    .alert {
+        width: 90vw;
+    }
+}
