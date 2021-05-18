@@ -2064,13 +2064,13 @@ textarea:focus {
 @media only screen and (max-width: 480px) {
     .alert-container {
         width: 93vw;
-        left: 0.7rem;
+        left: 0.7rem !important;
     }
     .alert-container .alert-header * {
         font-size: 0.82rem;
     }
     .alert-container .alert {
-        max-width: 100%;
+        max-width: 90%;
         margin: 0;
     }
 }
