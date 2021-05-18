@@ -1660,6 +1660,7 @@ textarea:focus {
     border-top: 1px dashed var(--alert-muted-blue);
 }
 .alert .alert-header .close-btn {
+    float: right;
     cursor: pointer;
     position: relative;
     top: -0.4rem;
