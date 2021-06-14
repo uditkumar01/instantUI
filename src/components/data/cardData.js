@@ -19,7 +19,7 @@ export const cardData = [
             {
                 subTitle: "",
                 cardText: "For using js copy snippet link :",
-                codeSnippet: `<link rel="stylesheet" href="https://instantui.netlify.app/assets/main.js"/>`,
+                codeSnippet: `<script defer rel="stylesheet" href="https://instantui.netlify.app/assets/main.js"></script>`,
             },
         ],
         iconClass1: "fas fa-question-circle",
