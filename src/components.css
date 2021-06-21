@@ -65,12 +65,12 @@
 ::-moz-selection {
     /* Code for Firefox */
     color: var(--blue-color);
-    background: var(--light-color);
+    background: rgba(28,156,202,0.5);
 }
 
 ::selection {
     color: var(--blue-color);
-    background: var(--light-color);
+    background: rgba(28,156,202,0.5);
 }
 body {
     background: var(--light-bg);
