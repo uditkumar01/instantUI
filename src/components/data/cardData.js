@@ -14,7 +14,7 @@ export const cardData = [
                 subTitle: "",
                 cardText:
                     "Copy this snippet and paste it in your css file directly :",
-                codeSnippet: `@import url("https://instantui.netlify.app/assets/main.css")`,
+                codeSnippet: `@import url("https://instantui.netlify.app/assets/main.css");`,
             },
             {
                 subTitle: "",
